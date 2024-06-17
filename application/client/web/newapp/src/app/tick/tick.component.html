@@ -16,7 +16,7 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr  *ngFor="let data of rowData;let i = index;" style="position: relative;">
+                  <tr  *ngFor="let data of listOfData;let i = index;" style="position: relative;">
                         <td>{{ data.name }}</td>
                         <td>{{ data.email }}</td>
                     <td (mouseenter)="show=i" (mouseleave)="show=-999">

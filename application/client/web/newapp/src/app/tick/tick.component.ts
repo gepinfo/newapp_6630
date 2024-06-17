@@ -91,7 +91,7 @@ export class TickComponent implements OnInit {
   
     
   
-    listOfData: DataItem[] = [];
+    listOfData: any[] = [];
 
     Update() {
         this.tickService.Updatetick(this.tick).subscribe((data:any) => {
