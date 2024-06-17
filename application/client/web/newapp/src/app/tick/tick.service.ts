@@ -17,35 +17,35 @@ export class TickService {
   BaseURL = environment.baseUrlAPI;
 
 
-  PostAllValues(data:any){
-    return this.http.post(`${this.BaseURL}/`,data);
+  PostAlltickValues(data:any){
+    return this.http.post(`${this.BaseURL}/tick`,data);
   }
 
-  GetAllValues(){
-    return this.http.get(`${this.BaseURL}/`);
+  GetAlltickValues(){
+    return this.http.get(`${this.BaseURL}/tick`);
   }
 
-  Update(data:any){
-    return this.http.put(`${this.BaseURL}//${data.id}`,data);
+  Updatetick(data:any){
+    return this.http.put(`${this.BaseURL}/tick/${data.id}`,data);
   }
 
-  getSpecific(id:number){
-    return this.http.get(`${this.BaseURL}//${id}`);
+  getSpecifictick(id:number){
+    return this.http.get(`${this.BaseURL}/tick/${id}`);
   }
 
-  getSpecificHistory(id:number){
-    return this.http.get(`${this.BaseURL}//${id}/history?days=30`);
+  getSpecifictickHistory(id:number){
+    return this.http.get(`${this.BaseURL}/tick/${id}/history?days=30`);
   }
 
-  DeleteValues(dataId:any){
-     return this.http.delete(`${this.BaseURL}//${dataId}`);
+  DeletetickValues(dataId:any){
+     return this.http.delete(`${this.BaseURL}/tick/${dataId}`);
   }
 
-  GetEntityById(Id:any): Observable<any> {
-    return this.http.get(`${this.BaseURL}/id/` + Id);
+  GetEntityById(tickId:any): Observable<any> {
+    return this.http.get(`${this.BaseURL}/tickid/` + tickId);
   }
 
-  Search(data:any): Observable<any> {
+  Searchtick(data:any): Observable<any> {
     const temp:any = [];
     const objectKeyPair = Object.entries(data);
     objectKeyPair.forEach((element, index) => {
@@ -54,6 +54,6 @@ export class TickService {
     }
     });
     let jwt_token = sessionStorage.getItem('JwtToken');
-    return this.http.get(`${this.BaseURL}` + `//get/search?jwt_token=${jwt_token}${temp.length > 0 ? `&${temp.join('&')}` : ''}`);
+    return this.http.get(`${this.BaseURL}` + `/tick/get/search?jwt_token=${jwt_token}${temp.length > 0 ? `&${temp.join('&')}` : ''}`);
   }
 }
