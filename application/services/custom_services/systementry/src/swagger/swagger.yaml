@@ -13,93 +13,12 @@ info:
       name: Apache 2.0
       url: https://www.apache.org/licenses/LICENSE-2.0.html
 servers:
-   - url: http://localhost:8142
+   - url: http://localhost:8010
      description: systementry
 tags:
 - name: User
   description: User details
 paths:
-   "/User/{id}":
-      delete:
-         tags:
-         -  User
-         description: GpDelete
-         parameters:
-         -  in: "path"
-            description: GpDelete
-            name: id
-            required: true
-            schema:
-               type: "string"
-         responses:
-            200:
-               description: Success
-            400:
-               description: Bad Request
-            404:
-               description: Not Found
-            500:
-               description: Internal Server Error
-      delete:
-         tags:
-         -  User
-         description: GpDelete
-         parameters:
-         -  in: "path"
-            description: GpDelete
-            name: id
-            required: true
-            schema:
-               type: "string"
-         responses:
-            200:
-               description: Success
-            400:
-               description: Bad Request
-            404:
-               description: Not Found
-            500:
-               description: Internal Server Error
-      delete:
-         tags:
-         -  User
-         description: GpDelete
-         parameters:
-         -  in: "path"
-            description: GpDelete
-            name: id
-            required: true
-            schema:
-               type: "string"
-         responses:
-            200:
-               description: Success
-            400:
-               description: Bad Request
-            404:
-               description: Not Found
-            500:
-               description: Internal Server Error
-      delete:
-         tags:
-         -  User
-         description: GpDelete
-         parameters:
-         -  in: "path"
-            description: GpDelete
-            name: id
-            required: true
-            schema:
-               type: "string"
-         responses:
-            200:
-               description: Success
-            400:
-               description: Bad Request
-            404:
-               description: Not Found
-            500:
-               description: Internal Server Error
    "/systemEntryFeature/userdata/{id}":
       get:
          tags:

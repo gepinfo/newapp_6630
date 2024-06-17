@@ -251,7 +251,7 @@ services:
     image: systementry-6630
     container_name: systementry-6630
     ports: 
-      - 8142:8142
+      - 8010:8010
     env_file: .env
     depends_on:
       - mongo
@@ -272,7 +272,7 @@ services:
     image: tikc-6630
     container_name: tikc-6630
     ports: 
-      - 8143:8143
+      - 8011:8011
     env_file: .env
     depends_on:
       - mongo

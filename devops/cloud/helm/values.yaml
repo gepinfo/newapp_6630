@@ -57,14 +57,14 @@ service:
   systementry: 
     name: systementry
     type: NodePort
-    port: 8142
-    targetPort: 8142
+    port: 8010
+    targetPort: 8010
 
   tikc: 
     name: tikc
     type: NodePort
-    port: 8143
-    targetPort: 8143
+    port: 8011
+    targetPort: 8011
 
 
 deployment:
